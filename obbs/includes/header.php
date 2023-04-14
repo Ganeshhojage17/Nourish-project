@@ -20,6 +20,7 @@
                                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                                     <nav>
                                         <ul class="nav navbar-nav">
+                                            <li><a href=".././index.html">Home</a></li>
                                             <li class="active"><a href="services.php">Services</a></li>
                                             <?php if (strlen($_SESSION['obbsuid']!=0)) {?>
                                             <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
