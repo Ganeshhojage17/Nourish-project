@@ -22,15 +22,8 @@ body{
 .banner{
     background: url(../images/1.jpg) no-repeat 0px 147px;
     background-size: cover;
-}
-.agileinfo-dot {
-    background: url(../images/dott.png)repeat 0px 0px;
-    background-size: 3px;
-    -webkit-background-size: 3px;
-    -moz-background-size: 3px;
-    -o-background-size: 3px;
-    -ms-background-size: 3px;
-    padding: 1em 0;
+      background-image: linear-gradient(to right top, #0e0537, #002d5f, #005383, #007ba1, #16a4b9);
+
 }
 .jarallax {
     position: relative;

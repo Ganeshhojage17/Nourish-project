@@ -84,7 +84,7 @@ foreach($results as $row)
 									<td><?php echo htmlentities($cnt);?></td>
 									<td><?php  echo htmlentities($row->ServiceName);?></td>
 									<td><?php  echo htmlentities($row->SerDes);?></td>
-									<td>$<?php  echo htmlentities($row->ServicePrice);?></td>
+									<td>₹<?php  echo htmlentities($row->ServicePrice);?></td>
 									<?php if($_SESSION['obbsuid']==""){?>
 									<td><a href="login.php" class="btn btn-default">Book Services</a></td>
 									<?php } else {?>

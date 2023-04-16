@@ -80,7 +80,7 @@ foreach($results as $row)
                                     <tr>
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->ServiceName);?></td>
-                                        <td class="d-none d-sm-table-cell">$<?php  echo htmlentities($row->ServicePrice);?></td>
+                                        <td class="d-none d-sm-table-cell">₹<?php  echo htmlentities($row->ServicePrice);?></td>
                                         <td class="d-none d-sm-table-cell">
                                             <span class="badge badge-primary"><?php  echo htmlentities($row->CreationDate);?></span>
                                         </td>
