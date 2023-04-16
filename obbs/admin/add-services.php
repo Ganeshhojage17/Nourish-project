@@ -40,6 +40,7 @@ echo "<script>window.location.href ='add-services.php'</script>";
     <head>
  <title>Nourish - Add Services</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
 
 </head>
     <body>

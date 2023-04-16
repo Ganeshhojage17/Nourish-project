@@ -29,6 +29,7 @@ $query->execute();
     <head>
  <title>Nourish - Admin Profile</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
 
 </head>
     <body>

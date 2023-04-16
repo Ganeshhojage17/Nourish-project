@@ -36,6 +36,7 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
     <head>       
         <title>Nourish - Forgot Page</title>
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
         <script type="text/javascript">
 function valid()
 {

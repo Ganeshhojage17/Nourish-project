@@ -38,6 +38,7 @@ echo '<script>alert("Your current password is wrong")</script>';
     <head>
  <title>Nourish - Change Password</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
 <script type="text/javascript">
 function checkpass()
 {

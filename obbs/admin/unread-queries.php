@@ -13,6 +13,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
         <title>Nourish - Unread Queries</title>
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 

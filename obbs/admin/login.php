@@ -45,6 +45,7 @@ echo "<script>alert('Invalid Details');</script>";
     <head>       
         <title>Nourish - Login Page</title>
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     </head>
     <body>
       

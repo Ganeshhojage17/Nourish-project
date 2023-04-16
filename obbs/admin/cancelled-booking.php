@@ -15,7 +15,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
         <title>Nourish - Cancelled Booking</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
-
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
     </head>

@@ -3,6 +3,7 @@
  <head>
  <title>Nourish - Admin Dashboard</title>
  <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+ <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     </head>
     <body>
         <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed main-content-narrow">
