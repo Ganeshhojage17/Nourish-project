@@ -38,7 +38,7 @@ echo "<script>window.location.href ='add-services.php'</script>";
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Online Banquet Booking System - Add Services</title>
+ <title>Nourish - Add Services</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>

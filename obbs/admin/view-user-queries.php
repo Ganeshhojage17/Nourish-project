@@ -18,7 +18,7 @@ $query->execute();
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Online Banquet Booking System - View Queries</title>
+        <title>Nourish - View Queries</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 

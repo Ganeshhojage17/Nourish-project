@@ -5,7 +5,7 @@
                             <h1><a href="services.php">Nourish </a></h1>
                         </div>
                         <div class="top-nav">
-                            <nav class="navbar navbar-default">
+                            <nav style="padding-left:15%;" class="navbar navbar-default">
                                 <!-- Brand and toggle get grouped for better mobile display -->
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

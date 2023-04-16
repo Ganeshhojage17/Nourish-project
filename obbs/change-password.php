@@ -38,7 +38,7 @@ echo '<script>alert("Your current password is wrong")</script>';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Banquet Booking System | Change Password</title>
+<title>Nourish | Change Password</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->

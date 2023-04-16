@@ -1,7 +1,7 @@
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
  <head>
- <title>Online Banquet Booking System - Admin Dashboard</title>
+ <title>Nourish - Admin Dashboard</title>
  <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
     </head>
     <body>

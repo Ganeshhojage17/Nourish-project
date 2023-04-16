@@ -43,7 +43,7 @@ echo "<script>alert('Invalid Details');</script>";
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>       
-        <title>Online Banquet Booking System - Login Page</title>
+        <title>Nourish - Login Page</title>
         <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
     </head>
     <body>

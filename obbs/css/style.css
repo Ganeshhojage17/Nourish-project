@@ -85,6 +85,7 @@ body{
     border: none;
 }
 .navbar {
+    padding-left: 15%;
     margin-bottom: 0;
 }
 .navbar-collapse {
@@ -270,7 +271,7 @@ ul.dropdown-menu {
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent), url(../images/3.jpg) repeat;
     background: -o-linear-gradient(transparent, transparent);
-    -webkit-background-clip: text;
+    --webkit-background-clip: text;
 }
 .w3l-banner-text p{
 	color: #000000;
@@ -282,7 +283,7 @@ ul.dropdown-menu {
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent), url(../images/3.jpg) repeat;
     background: -o-linear-gradient(transparent, transparent);
-    -webkit-background-clip: text;
+    --webkit-background-clip: text;
 }
 .w3-banner-info:before{
     content: '';
@@ -547,11 +548,11 @@ footer{
     font-size: .9em;
     padding: .5em;
     border: solid 1px #919191;
-    -webkit-appearance: none;
+    --webkit-appearance: none;
 }
 .agile-footer-info input[type="submit"] {
 	outline: none;
-    -webkit-appearance: none;
+    --webkit-appearance: none;
     border: solid 1px #8bc34a;
     font-size: .9em;
     color: #ffffff;

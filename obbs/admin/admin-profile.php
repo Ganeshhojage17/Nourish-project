@@ -27,7 +27,7 @@ $query->execute();
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Online Banquet Booking System - Admin Profile</title>
+ <title>Nourish - Admin Profile</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>

@@ -31,7 +31,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Online Banquet Booking System - View Booking</title>
+ <title>Nourish - View Booking</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>

@@ -36,7 +36,7 @@ echo '<script>alert("Your current password is wrong")</script>';
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Online Banquet Booking System - Change Password</title>
+ <title>Nourish - Change Password</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 <script type="text/javascript">
 function checkpass()

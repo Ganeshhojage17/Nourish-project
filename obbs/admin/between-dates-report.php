@@ -11,7 +11,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Online Banquet Booking System - Between Dates Report</title>
+ <title>Nourish - Between Dates Report</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>

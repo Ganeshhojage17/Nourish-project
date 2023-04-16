@@ -24,7 +24,7 @@ $query->execute();
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Online Banquet Booking System - Manage Event Type</title>
+        <title>Nourish - Manage Event Type</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 

@@ -36,7 +36,7 @@ echo "<script>window.location.href ='add-event-type.php'</script>";
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Online Banquet Booking System - Add Event Type</title>
+ <title>Nourish - Add Event Type</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
