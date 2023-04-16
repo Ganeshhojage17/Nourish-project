@@ -29,7 +29,7 @@ echo "<script>window.location.href ='mail.php'</script>";
 <html lang="en">
 <head>
 <title>Nourish | Mail</title>
-
+<link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
