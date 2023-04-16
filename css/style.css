@@ -115,12 +115,6 @@ body {
   left: 0;
   right: 0;
 }
-@media (max-width: 575px) {
-  #nav {
-    height: 70px;
-    overflow:hidden;
-  }
-}
 .nav-container {
   background: transparent;
   width: 100%;
@@ -258,6 +252,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    justify-content: center;
     padding: 10px 20px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.8);
     font-size: 16px;
