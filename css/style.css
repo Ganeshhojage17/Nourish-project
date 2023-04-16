@@ -400,26 +400,26 @@ section {
 .img {
   width: 100%;
   height: 100%;
-  background-image: url("/img/food-img/food3.png");
+  background-image: url("img/food-img/food3.png");
   background-size: 100% 100%;
   animation: slide 20s linear infinite;
   z-index: 3;
 }
 @keyframes slide {
   0% {
-    background-image: url("/img/food-img/food.png");
+    background-image: url("../img/food-img/food.png");
   }
   25% {
-    background-image: url("/img/food-img/food1.png");
+    background-image: url("../img/food-img/food1.png");
   }
   50% {
-    background-image: url("/img/food-img/food2.png");
+    background-image: url("../img/food-img/food2.png");
   }
   75% {
-    background-image: url("/img/food-img/food3.png");
+    background-image: url("../img/food-img/food3.png");
   }
   100% {
-    background-image: url("/img/food-img/food4.png");
+    background-image: url("../img/food-img/food4.png");
   }
 }
 .info {
