@@ -44,7 +44,7 @@ echo "<script>alert('Email-id already exist. Please try again');</script>";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Banquet Booking System | Mail</title>
+<title>Nourish | Mail</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->

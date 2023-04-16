@@ -33,7 +33,7 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Banquet Booking System | Forgot Password</title>
+<title>Nourish | Forgot Password</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->

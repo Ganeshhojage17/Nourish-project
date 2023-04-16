@@ -42,7 +42,7 @@ echo "<script>window.location.href ='services.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Online Banquet Booking System | Book Services</title>
+<title>Nourish</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
