@@ -153,7 +153,7 @@ CREATE TABLE `tblpage` (
 
 INSERT INTO `tblpage` (`ID`, `PageType`, `PageTitle`, `PageDescription`, `Email`, `MobileNumber`, `UpdationDate`) VALUES
 -- (1, 'aboutus', 'About Us', '<b>Online Banquet Booking System</b><div><b>OBBS is one of the Internet\'s largest and trusted Online Banquet Booking Service. OBBShas done several placements locally &amp; globally for top artists.</b></div><div><b><br></b></div><div><b>&nbsp;Test data for testing.&nbsp;</b></div>', NULL, NULL, '2022-02-19 17:54:36'),
-(1, 'contactus', 'Contact Us', 'D-204, Hole Town South West,Delhi-110096,India', 'info@gmail.com', 1234567899, '2022-02-19 17:54:52');
+(1, 'contactus', 'Contact Us', 'D-204, little flower Andheri(e),mum:-61', 'nourish@help.com', 9136701673, '2023-03-19 17:54:52');
 
 -- --------------------------------------------------------
 
@@ -174,10 +174,10 @@ CREATE TABLE `tblservice` (
 --
 
 INSERT INTO `tblservice` (`ID`, `ServiceName`, `SerDes`, `ServicePrice`, `CreationDate`) VALUES
-(1, 'Birthday Part', '("Join us for a night of fun and celeration as we raise a glass an birthday! With delicious food and great music, its sure to be a remember party".)', '800', '2023-03-24 07:17:43'),
-(2, 'Private Part', '("Celebrate your next private party at Nourish, a cozy and elegant venue with delicious food, friendly service and a stylish dinning room.Contact us for make your party special".)', '700', '2023-03-24 07:18:32'),
-(3, 'Custom Party', '("Make your next celebration unforgettable by hosting it at Nourish! Our delicious food and tailor the event to your specific needs and preference".)', '650', '2023-03-24 07:19:14'),
-(4, 'Party DJ', '("we install the DJ equipment 1 hour before your selected event start time")', '700', '2020-01-24 07:18:32');
+(1, 'Birthday Part', '("Join us for a night of fun and celeration as we raise a glass an birthday! With delicious food and great music, its sure to be a remember party".)', '20,000', '2023-03-24 07:17:43'),
+(2, 'Private Part', '("Celebrate your next private party at Nourish, a cozy and elegant venue with delicious food, friendly service and a stylish dinning room.Contact us for make your party special".)', '25,000', '2023-03-24 07:17:43'),
+(3, 'Custom Party', '("Make your next celebration unforgettable by hosting it at Nourish! Our delicious food and tailor the event to your specific needs and preference".)', '30,000', '2023-03-24 07:19:14'),
+(4, 'Party DJ', '("we install the DJ equipment 1 hour before your selected event start time")', '25,000', '2020-01-24 07:18:32');
 
 -- --------------------------------------------------------
 

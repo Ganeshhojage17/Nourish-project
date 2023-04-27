@@ -5,7 +5,7 @@
                             <h1><a href="services.php">Nourish </a></h1>
                         </div>
                         <div class="top-nav">
-                            <nav style="padding-left:15%;" class="navbar navbar-default">
+                            <nav style="padding-left:20%;" class="navbar navbar-default">
                                 <!-- Brand and toggle get grouped for better mobile display -->
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -22,12 +22,14 @@
                                         <ul class="nav navbar-nav">
                                             <li><a href=".././index.html">Home</a></li>
                                             <li class="active"><a href="services.php">Services</a></li>
+                                            <li><a href="table-reservation.php">Table reservation</a></li>
                                             <?php if (strlen($_SESSION['obbsuid']!=0)) {?>
                                             <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="hvr-bounce-to-bottom" href="profile.php">Profile</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="booking-history.php">Booking History</a></li>   
-                                                     <li><a class="hvr-bounce-to-bottom" href="change-password.php">Change Password</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="services-history.php">Services History</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="reservation-history.php">Table-reservation History</a></li>   
+                                                    <li><a class="hvr-bounce-to-bottom" href="change-password.php">Change Password</a></li>
                                                     <li><a class="hvr-bounce-to-bottom" href="logout.php">Logout</a></li>        
                                                 </ul>
                                             </li> <?php } ?> 

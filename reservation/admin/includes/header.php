@@ -20,22 +20,6 @@ if (strlen($_SESSION['odmsaid']==0)) {
                             <i class="fa fa-navicon"></i>
                         </button>
                        
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-wrench"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="page-header-options-dropdown">
-                                <h6 class="dropdown-header">Header</h6>
-                                <button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
-                                <button type="button" class="btn btn-sm btn-block btn-alt-secondary d-none d-lg-block mb-10" data-toggle="layout" data-action="header_style_classic">Classic Style</button>
-                                <div class="d-none d-xl-block">
-                                    <h6 class="dropdown-header">Main Content</h6>
-                                    <button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
-                                </div>
-                                <div class="dropdown-divider"></div>
-                               
-                            </div>
-                        </div>
                         <!-- END Layout Options -->
 
                         <!-- Color Themes (used just for demonstration) -->

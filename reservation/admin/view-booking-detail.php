@@ -125,7 +125,7 @@ foreach($results as $row)
   </tr>
    <tr>
     <th>Service Price</th>
-    <td>$<?php  echo $row->ServicePrice;?></td>
+    <td>₹<?php  echo $row->ServicePrice;?></td>
     <th>Apply Date</th>
     <td><?php  echo $row->BookingDate;?></td>
   </tr>

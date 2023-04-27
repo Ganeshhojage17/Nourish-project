@@ -47,7 +47,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 		<div class="agileinfo-dot">
 		<?php include_once('includes/header.php');?>
 			<div class="wthree-heading">
-				<h2>Booking Histor</h2>
+				<h2>SERVICES HISTORY</h2>
 			</div>
 		</div>
 	</div>

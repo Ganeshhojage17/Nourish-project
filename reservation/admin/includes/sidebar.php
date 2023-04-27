@@ -127,7 +127,7 @@ foreach($results as $row)
                                     </ul>
                                 </li>
                                 <li>
-                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-note"></i><span class="sidebar-mini-hide">Booking</span></a>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-note"></i><span class="sidebar-mini-hide">Service Booking</span></a>
                                     <ul>
                                         <li>
                                             <a href="new-booking.php">New Booking</a>
