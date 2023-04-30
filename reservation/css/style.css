@@ -975,6 +975,11 @@ footer{
 	font-weight: 800;
 }
 
+.hrt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*-----------------*/
 /***** Apollo *****/

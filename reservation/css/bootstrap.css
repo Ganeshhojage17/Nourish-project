@@ -3046,6 +3046,9 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 .btn-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #333;
   background-color: #fff;
   border-color: #ccc;

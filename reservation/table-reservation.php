@@ -43,62 +43,26 @@ include('includes/dbconnection.php');
 		<div class="agileinfo-dot">
 		<?php include_once('includes/header.php');?>
 			<div class="wthree-heading">
-				<h2>Services</h2>
+				<h2>Table reservation</h2>
 			</div>
 		</div>
 	</div>
 	<!-- //banner -->
 	<!-- about -->
-	<!-- about-top -->
-	<div class="about-top">
-		<div class="container">
-			<div class="wthree-services-bottom-grids">
-				
-				<p class="wow fadeInUp animated" data-wow-delay=".5s">List of services which is prvided by us.</p>
-					<div class="bs-docs-example wow fadeInUp animated" data-wow-delay=".5s">
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>Package Name</th>
-									<th>Description</th>
-									<th>Price</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-							
-								<?php
-$sql="SELECT * from tblservice";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
 
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
-								
-								<tr>
-									<td><?php echo htmlentities($cnt);?></td>
-									<td><?php  echo htmlentities($row->ServiceName);?></td>
-									<td><?php  echo htmlentities($row->SerDes);?></td>
-									<td>₹<?php  echo htmlentities($row->ServicePrice);?></td>
-									<?php if($_SESSION['obbsuid']==""){?>
-									<td><a href="login.php" class="btn btn-default">Book Services</a></td>
-									<?php } else {?>
-									<td><a href="book-services.php?bookid=<?php echo $row->ID;?>" class="btn btn-default">Book Services</a></td><?php }?>
-								</tr> <?php $cnt=$cnt+1;}} ?>
-							</tbody>
-						</table>
-					</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //about-top -->
+
 	
+	<p style="color:red" class="text-center"><br>For reservation you have to logged in!<br></p>
+    <p class="text-center">In order to make a reservation you have to create an account!<br><br><p>
+	<p class="text-center">To reservation click on login or book now!</p>
+	
+	<?php if($_SESSION['obbsuid']==""){?>
+		
+									<a style="display:flex; justify-content:center; align-items:center;" href="login.php" class="btn btn-default">Login</a></td>
+									<?php } else {?>
+									<a style="display:flex; justify-content:center; align-items:center;" href="book-table.php" class="btn btn-default">Book Now</a></td><?php }?>
+
+
 	<!-- //about -->
 	<!-- footer -->
 	<?php include_once('includes/footer.php');?>

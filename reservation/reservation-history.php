@@ -11,7 +11,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Nourish | SERVICES History </title>
+<title>Nourish | RESERVATION History </title>
 <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
@@ -47,7 +47,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 		<div class="agileinfo-dot">
 		<?php include_once('includes/header.php');?>
 			<div class="wthree-heading">
-				<h2>SERVICES HISTORY</h2>
+				<h2>RESERVATION HISTORY</h2>
 			</div>
 		</div>
 	</div>
@@ -58,7 +58,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 		<div class="container">
 			<div class="wthree-services-bottom-grids">
 				
-				<p class="wow fadeInUp animated" data-wow-delay=".5s">List of booking.</p>
+				<p class="wow fadeInUp animated" data-wow-delay=".5s">List of Reservation booking.</p>
 					<div class="bs-docs-example wow fadeInUp animated" data-wow-delay=".5s">
 						<table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
                                 <thead>

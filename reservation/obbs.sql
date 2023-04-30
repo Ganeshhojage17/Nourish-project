@@ -73,9 +73,9 @@ CREATE TABLE `tblbooking` (
 --
 
 INSERT INTO `tblbooking` (`ID`, `BookingID`, `ServiceID`, `UserID`, `BookingFrom`, `BookingTo`, `EventType`, `Numberofguest`, `Message`, `BookingDate`, `Remark`, `Status`, `UpdationDate`) VALUES
-(1, 422701608, 1, 3, '2022-02-17', '2022-02-19', 'Wedding', 200, 'rytriyu\r\nuytuyi\r\n\r\njoyuutuyfh', '2022-02-16 06:58:08', 'Approved', 'Approved', '2022-02-16 07:32:01'),
-(2, 697339619, 2, 4, '2022-02-20', '2022-02-22', 'Anniversary', 200, 'NA', '2022-02-19 15:24:38', 'Your booking is cancelled', 'Cancelled', '2022-02-19 15:59:38'),
-(3, 347642822, 4, 5, '2022-02-27', '2022-02-28', 'Pre Engagement', 25, 'NA', '2022-02-19 17:51:30', 'Approved', 'Approved', '2022-02-19 17:52:24');
+(1, 422701608, 1, 3, '2023-02-17', '2023-02-19', 'Wedding', 200, 'NA', '2023-02-16 06:58:08', 'Approved', 'Approved', '2023-02-16 07:32:01'),
+(2, 697339619, 2, 4, '2023-02-20', '2023-02-22', 'Anniversary', 200, 'NA', '2023-02-19 15:24:38', 'Your booking is cancelled', 'Cancelled', '2023-02-19 15:59:38'),
+(3, 347642822, 4, 5, '2023-02-27', '2023-02-28', 'Pre Engagement', 25, 'NA', '2023-02-19 17:51:30', 'Approved', 'Approved', '2023-02-19 17:52:24');
 
 -- --------------------------------------------------------
 
@@ -200,8 +200,8 @@ CREATE TABLE `tbluser` (
 
 INSERT INTO `tbluser` (`ID`, `FullName`, `MobileNumber`, `Email`, `Password`, `RegDate`) VALUES
 (1, 'Ganesh', 9879878979, 'ganesh@gmail.com', 'fa1d87bc7f85769ea9dee2e4957321ae', '2023-03-15 09:15:51'),
-(2, 'Aditya', 4579878687, 'adi@gmail.com', 'c46335eb267e2e1cde5b017acb4cd799', '2023-03-15 09:16:44'),
-(3, 'Yash', 5465465464, 'yash@gmail.com', 'c296539f3286a899d8b3f6632fd62274', '2023-03-15 12:07:55'),
+(2, 'Aditya', 9579878687, 'adi@gmail.com', 'c46335eb267e2e1cde5b017acb4cd799', '2023-03-15 09:16:44'),
+(3, 'Yash', 9465465464, 'yash@gmail.com', 'c296539f3286a899d8b3f6632fd62274', '2023-03-15 12:07:55'),
 (4, 'Ajay', 1234569879, 'ajay@gmail.com', '29e457082db729fa1059d4294ede3909', '2023-03-19 15:17:04');
 
 --
