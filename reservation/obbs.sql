@@ -205,6 +205,29 @@ INSERT INTO `tbluser` (`ID`, `FullName`, `MobileNumber`, `Email`, `Password`, `R
 (4, 'Ajay', 1234569879, 'ajay@gmail.com', '29e457082db729fa1059d4294ede3909', '2023-03-19 15:17:04');
 
 --
+-- Table structure for table `reservation`
+--
+
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `reserve_id` int(11) NOT NULL,
+  `no_of_guest` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `date_res` varchar(100) NOT NULL,
+  `time` varchar(100) NOT NULL,
+  `suggestions` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reservation`
+--
+
+INSERT INTO `reservation` (`reserve_id`, `no_of_guest`, `email`, `phone`, `date_res`, `time`, `suggestions`) VALUES
+(1, '2', 'abdulflezy13@yahoo.com', '09087676543', '2016-12-14', '15:00', 'suggestions suggestions suggestions'),
+(2, '2', 'abdulflezy13@ymail.com', '09087676546', '2016-12-30', '18:00', 'suggestions suggestions suggestions');
+
+
+--
 -- Indexes for dumped tables
 --
 
@@ -255,6 +278,13 @@ ALTER TABLE `tbluser`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`reserve_id`);
+
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -299,6 +329,11 @@ ALTER TABLE `tblservice`
 --
 ALTER TABLE `tbluser`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+ALTER TABLE `reservation`
+  MODIFY `reserve_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+
 
 --
 -- Constraints for dumped tables
