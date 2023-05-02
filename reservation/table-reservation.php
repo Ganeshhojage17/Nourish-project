@@ -60,7 +60,7 @@ include('includes/dbconnection.php');
 		
 									<a style="display:flex; justify-content:center; align-items:center;" href="login.php" class="btn btn-default">Login</a></td>
 									<?php } else {?>
-									<a style="display:flex; justify-content:center; align-items:center;" href="reservation.php" class="btn btn-default">Book Now</a></td><?php }?>
+									<a style="display:flex; justify-content:center; align-items:center;" href="book-table.php" class="btn btn-default">Book Now</a></td><?php }?>
 
 
 	<!-- //about -->
