@@ -52,14 +52,17 @@ include('includes/dbconnection.php');
 
 
 	
-	<p style="color:red" class="text-center"><br>For reservation you have to logged in!<br></p>
+	<!-- <p style="color:red" class="text-center"><br>For reservation you have to logged in!<br></p>
     <p class="text-center">In order to make a reservation you have to create an account!<br><br><p>
-	<p class="text-center">To reservation click on login or book now!</p>
+	<p class="text-center">To reservation click on login or book now!</p> -->
 	
 	<?php if($_SESSION['obbsuid']==""){?>
-		
+		 							<p class="text-center text-danger"><br>You are currently not logged in!<br></p>
+        							<p class="text-center">In order to make a reservation you have to create an account!<br><br><p>';
 									<a style="display:flex; justify-content:center; align-items:center;" href="login.php" class="btn btn-default">Login</a></td>
 									<?php } else {?>
+									<p class="text-center text-danger"><br>You are currently logged in!<br></p>
+        							<p class="text-center">For table reservation Click on Book Now!<br><br><p>';
 									<a style="display:flex; justify-content:center; align-items:center;" href="book-table.php" class="btn btn-default">Book Now</a></td><?php }?>
 
 

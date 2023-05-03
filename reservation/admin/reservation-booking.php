@@ -12,7 +12,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
 <!doctype html>
 <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
-        <title>Nourish - Total Booking</title>
+        <title>Nourish - Reservation Booking</title>
 
         <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
         <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
@@ -33,14 +33,14 @@ if (strlen($_SESSION['odmsaid']==0)) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">Total Booking</h2>
+                    <h2 class="content-heading">Reservation Booking</h2>
 
                    
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header block-header-default">
-                            <h3 class="block-title">Total Booking</h3>
+                            <h3 class="block-title">Reservation Booking</h3>
                         </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->

@@ -156,6 +156,10 @@ foreach($results as $row)
                                       
                                     </ul>
                                 </li>
+                                <li>
+                                    <a  href="reservation-booking.php"><i class="si si-book-open"></i><span class="sidebar-mini-hide">Reservation</span></a>
+                                 
+                                </li>
                                
                                 <li>
                                     <a  href="between-dates-report.php"><i class="si si-vector"></i><span class="sidebar-mini-hide">B/w Dates Report</span></a>

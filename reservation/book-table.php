@@ -41,12 +41,10 @@ if (strlen($_SESSION['obbsuid']==0)) {
 						
 						$msg = "<p style='padding: 15px; color: green; background: #eeffee; font-weight: bold; font-size: 13px; border-radius: 4px; text-align: center;'>Reservation placed successfully. Your reservation code is $reserve_code. Please Note that reservation expires after one hour</p>";
 
-						echo '<script>alert("Your Reservation has been Booked Request Has Been Send. We Will Contact You Soon")</script>';
 						
 					}else{
 						
 						$msg = "<p style='padding: 15px; color: red; background: #ffeeee; font-weight: bold; font-size: 13px; border-radius: 4px; text-align: center;'>Could not place reservation. Please try again</p>";
-						echo '<script>alert("Something Went Wrong. Please try again")</script>';
 
 					}
 					

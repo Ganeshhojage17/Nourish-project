@@ -323,14 +323,14 @@ ALTER TABLE `tblpage`
 --
 ALTER TABLE `tblservice`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `tbluser`
 --
 ALTER TABLE `tbluser`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
---
+
+--AUTO_INCREMENT for table 'reservation'
 ALTER TABLE `reservation`
   MODIFY `reserve_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 
