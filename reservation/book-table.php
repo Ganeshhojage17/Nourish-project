@@ -14,7 +14,8 @@ if (strlen($_SESSION['obbsuid']==0)) {
 		
 		if(isset($_POST['submit'])) {
 
-			$resid=mt_rand(100000000, 999999999);			
+			$resid=mt_rand(100000000, 999999999);	
+			$uid=$_SESSION['obbsuid'];		
 			$guest = preg_replace("#[^0-9]#", "", $_POST['guest']);
 			$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 			$phone = preg_replace("#[^0-9]#", "", $_POST['phone']);
@@ -24,7 +25,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 			
 			if($guest != "" && $email && $phone != "" && $date_res != "" && $time != "" && $suggestions != "") {
 				
-				$check = $dbh->query("SELECT * FROM reservation WHERE resid='".$resid."' AND no_of_guest='".$guest."' AND email='".$email."' AND phone='".$phone."' AND date_res='".$date_res."' AND time='".$time."' LIMIT 1");
+				$check = $dbh->query("SELECT * FROM reservation WHERE resid='".$resid."' AND UserID='".$uid."' AND no_of_guest='".$guest."' AND email='".$email."' AND phone='".$phone."' AND date_res='".$date_res."' AND time='".$time."' LIMIT 1");
 				
 				if($check->num_rows) {
 					
@@ -32,7 +33,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 					
 				}else{
 					
-					$insert = $dbh->query("INSERT INTO reservation(resid, no_of_guest, email, phone, date_res, time, suggestions) VALUES('".$resid."', '".$guest."', '".$email."', '".$phone."', '".$date_res."', '".$time."', '".$suggestions."')");
+					$insert = $dbh->query("INSERT INTO reservation(resid, UserID, no_of_guest, email, phone, date_res, time, suggestions) VALUES('".$resid."', '".$uid."', '".$guest."', '".$email."', '".$phone."', '".$date_res."', '".$time."', '".$suggestions."')");
 					
 					if($insert) {
 						

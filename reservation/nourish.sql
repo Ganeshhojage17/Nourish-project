@@ -211,21 +211,25 @@ INSERT INTO `tbluser` (`ID`, `FullName`, `MobileNumber`, `Email`, `Password`, `R
 CREATE TABLE `reservation` (
   `reserve_id` int(10) NOT NULL,
   `resid` int(10) NOT NULL,
+  `UserID` int(5) DEFAULT NULL,
   `no_of_guest` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
   `date_res` varchar(100) NOT NULL,
   `time` varchar(100) NOT NULL,
-  `suggestions` varchar(100) NOT NULL
+  `suggestions` varchar(100) NOT NULL,
+  `Remark` varchar(200) DEFAULT NULL,
+  `Status` varchar(200) DEFAULT NULL,
+  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `reservation`
 --
 
-INSERT INTO `reservation` (`reserve_id`,`resid` , `no_of_guest`, `email`, `phone`, `date_res`, `time`, `suggestions`) VALUES
-(1,984752749 , '10', 'ganesh@gmail.com', '9087676543', '2023-03-14', '15:00', 'breakfast'),
-(2,357389471 , '15', 'adi@gmail.com', '9087676546', '2023-03-30', '18:00', 'lunch');
+INSERT INTO `reservation` (`reserve_id`,`resid` ,`UserID`, `no_of_guest`, `email`, `phone`, `date_res`, `time`, `suggestions`, `Remark`, `Status`, `UpdationDate`) VALUES
+(1,984752749 , '10', 2, 'ganesh@gmail.com', '9087676543', '2023-03-14', '15:00', 'breakfast', 'Approved', 'Approved', '2023-02-16 07:32:01'),
+(2,357389471 , '15', 3, 'adi@gmail.com', '9087676546', '2023-03-30', '18:00', 'lunch', 'Approved', 'Approved', '2023-02-19 17:52:24');
 
 
 --

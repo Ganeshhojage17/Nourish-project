@@ -76,7 +76,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
                                 <tbody>
 <?php
 $uid=$_SESSION['obbsuid'];
-$sql="SELECT tbluser.FullName,tbluser.MobileNumber,tbluser.Email,tblbooking.BookingID,tblbooking.BookingDate,tblbooking.Status,tblbooking.ID from tblbooking join tbluser on tbluser.ID=tblbooking.UserID where tblbooking.UserID='$uid'";
+$sql="SELECT tbluser.FullName,tbluser.MobileNumber,tbluser.Email,reservation.resid,reservation.date_res,reservation.Status,reservation.reserve_id from reservation join tbluser on tbluser.ID=reservation.UserID where reservation.UserID='$uid'";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -88,12 +88,12 @@ foreach($results as $row)
 {               ?>
                                     <tr>
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->BookingID);?></td>
+                                        <td class="font-w600"><?php  echo htmlentities($row->resid);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->FullName);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->MobileNumber);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->Email);?></td>
                                         <td class="font-w600">
-                                            <span class="badge badge-primary"><?php  echo htmlentities($row->BookingDate);?></span>
+                                            <span class="badge badge-primary"><?php  echo htmlentities($row->date_res);?></span>
                                         </td>
                                         <?php if($row->Status==""){ ?>
 
@@ -103,7 +103,7 @@ foreach($results as $row)
                                             <span class="badge badge-primary"><?php  echo htmlentities($row->Status);?></span>
                                         </td>
 <?php } ?> 
-                                         <td class="d-none d-sm-table-cell"><a href="view-booking-detail.php?editid=<?php echo htmlentities ($row->ID);?>&&bookingid=<?php echo htmlentities ($row->BookingID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                         <td class="d-none d-sm-table-cell"><a href="view-booking-detail.php?editid=<?php echo htmlentities ($row->reserve_id);?>&&bookingid=<?php echo htmlentities ($row->resid);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?> 
                                 
