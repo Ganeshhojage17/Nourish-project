@@ -13,7 +13,8 @@ if (strlen($_SESSION['obbsuid']==0)) {
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		if(isset($_POST['submit'])) {
-			
+
+			$resid=mt_rand(100000000, 999999999);			
 			$guest = preg_replace("#[^0-9]#", "", $_POST['guest']);
 			$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 			$phone = preg_replace("#[^0-9]#", "", $_POST['phone']);
@@ -23,7 +24,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 			
 			if($guest != "" && $email && $phone != "" && $date_res != "" && $time != "" && $suggestions != "") {
 				
-				$check = $dbh->query("SELECT * FROM reservation WHERE no_of_guest='".$guest."' AND email='".$email."' AND phone='".$phone."' AND date_res='".$date_res."' AND time='".$time."' LIMIT 1");
+				$check = $dbh->query("SELECT * FROM reservation WHERE resid='".$resid."' AND no_of_guest='".$guest."' AND email='".$email."' AND phone='".$phone."' AND date_res='".$date_res."' AND time='".$time."' LIMIT 1");
 				
 				if($check->num_rows) {
 					
@@ -31,15 +32,15 @@ if (strlen($_SESSION['obbsuid']==0)) {
 					
 				}else{
 					
-					$insert = $dbh->query("INSERT INTO reservation(no_of_guest, email, phone, date_res, time, suggestions) VALUES('".$guest."', '".$email."', '".$phone."', '".$date_res."', '".$time."', '".$suggestions."')");
+					$insert = $dbh->query("INSERT INTO reservation(resid, no_of_guest, email, phone, date_res, time, suggestions) VALUES('".$resid."', '".$guest."', '".$email."', '".$phone."', '".$date_res."', '".$time."', '".$suggestions."')");
 					
 					if($insert) {
 						
-						$ins_id = $dbh->insert_id;
+						$resid = $dbh->insert_id;
 						
-						$reserve_code = "UNIQUE_$ins_id".substr($phone, 3, 8);
+						$reserve_code = "UNIQUE_$resid";
 						
-						$msg = "<p style='padding: 15px; color: green; background: #eeffee; font-weight: bold; font-size: 13px; border-radius: 4px; text-align: center;'>Reservation placed successfully. Your reservation code is $reserve_code. Please Note that reservation expires after one hour</p>";
+						$msg = "<p style='padding: 15px; color: green; background: #eeffee; font-weight: bold; font-size: 13px; border-radius: 4px; text-align: center;'>Reservation placed successfully. Please Note that reservation expires after one hour</p>";
 
 						
 					}else{

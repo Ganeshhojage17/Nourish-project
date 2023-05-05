@@ -208,23 +208,24 @@ INSERT INTO `tbluser` (`ID`, `FullName`, `MobileNumber`, `Email`, `Password`, `R
 -- Table structure for table `reservation`
 --
 
-CREATE TABLE IF NOT EXISTS `reservation` (
-  `reserve_id` int(11) NOT NULL,
+CREATE TABLE `reservation` (
+  `reserve_id` int(10) NOT NULL,
+  `resid` int(10) NOT NULL,
   `no_of_guest` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
   `date_res` varchar(100) NOT NULL,
   `time` varchar(100) NOT NULL,
   `suggestions` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `reservation`
 --
 
-INSERT INTO `reservation` (`reserve_id`, `no_of_guest`, `email`, `phone`, `date_res`, `time`, `suggestions`) VALUES
-(1, '2', 'abdulflezy13@yahoo.com', '09087676543', '2016-12-14', '15:00', 'suggestions suggestions suggestions'),
-(2, '2', 'abdulflezy13@ymail.com', '09087676546', '2016-12-30', '18:00', 'suggestions suggestions suggestions');
+INSERT INTO `reservation` (`reserve_id`,`resid` , `no_of_guest`, `email`, `phone`, `date_res`, `time`, `suggestions`) VALUES
+(1,984752749 , '10', 'ganesh@gmail.com', '9087676543', '2023-03-14', '15:00', 'breakfast'),
+(2,357389471 , '15', 'adi@gmail.com', '9087676546', '2023-03-30', '18:00', 'lunch');
 
 
 --
@@ -329,8 +330,9 @@ ALTER TABLE `tblservice`
 ALTER TABLE `tbluser`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
-
---AUTO_INCREMENT for table 'reservation'
+--
+-- AUTO_INCREMENT for table `reservation`
+--
 ALTER TABLE `reservation`
   MODIFY `reserve_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 

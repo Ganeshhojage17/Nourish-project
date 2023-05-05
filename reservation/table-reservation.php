@@ -50,11 +50,6 @@ include('includes/dbconnection.php');
 	<!-- //banner -->
 	<!-- about -->
 
-
-	
-	<!-- <p style="color:red" class="text-center"><br>For reservation you have to logged in!<br></p>
-    <p class="text-center">In order to make a reservation you have to create an account!<br><br><p>
-	<p class="text-center">To reservation click on login or book now!</p> -->
 	
 	<?php if($_SESSION['obbsuid']==""){?>
 		 							<p class="text-center text-danger"><br>You are currently not logged in!<br></p>
