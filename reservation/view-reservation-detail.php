@@ -11,7 +11,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Nourish | RESERVATION History </title>
+<title>Nourish | reservation Booking </title>
 <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
@@ -47,7 +47,7 @@ if (strlen($_SESSION['obbsuid']==0)) {
 		<div class="agileinfo-dot">
 		<?php include_once('includes/header.php');?>
 			<div class="wthree-heading">
-				<h2>RESERVATION HISTORY</h2>
+				<h2>View Reservation</h2>
 			</div>
 		</div>
 	</div>
@@ -58,26 +58,14 @@ if (strlen($_SESSION['obbsuid']==0)) {
 		<div class="container">
 			<div class="wthree-services-bottom-grids">
 				
-				<p class="wow fadeInUp animated" data-wow-delay=".5s">List of Reservation booking.</p>
+				<p class="wow fadeInUp animated" data-wow-delay=".5s">View Your Reservation Details.</p>
 					<div class="bs-docs-example wow fadeInUp animated" data-wow-delay=".5s">
-						<table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center"></th>
-                                        <th>Booking ID</th>
-                                        <th class="d-none d-sm-table-cell">Cutomer Name</th>
-                                        <th class="d-none d-sm-table-cell">Mobile Number</th>
-                                        <th class="d-none d-sm-table-cell">Email</th>
-                                        <th class="d-none d-sm-table-cell">Booking Date</th>
-                                        <th class="d-none d-sm-table-cell">Status</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
-                                       </tr>
-                                </thead>
-                                <tbody>
-<?php
-$uid=$_SESSION['obbsuid'];
-$sql="SELECT tbluser.FullName,tbluser.MobileNumber,tbluser.Email,reservation.resid,reservation.date_res,reservation.Status,reservation.reserve_id from reservation join tbluser on tbluser.ID=reservation.UserID where reservation.UserID='$uid'";
+						 <?php
+                  $uid=$_SESSION['obbsuid'];
+
+$sql="SELECT tbluser.FullName,tbluser.MobileNumber,tbluser.Email,reservation.resid,reservation.date_res,reservation.no_of_guest,reservation.suggestions, reservation.Remark,reservation.Status,reservation.UpdationDate from reservation join tbluser on tbluser.ID=reservation.UserID  where reservation.UserID=:uid";
 $query = $dbh -> prepare($sql);
+$query-> bindParam(':uid', $uid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
@@ -86,31 +74,86 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                                    <tr>
-                                        <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->resid);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->FullName);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->MobileNumber);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->Email);?></td>
-                                        <td class="font-w600">
-                                            <span class="badge badge-primary"><?php  echo htmlentities($row->date_res);?></span>
-                                        </td>
-                                        <?php if($row->Status==""){ ?>
+                            <table border="1" class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
+                                <tr>
+                                    <th colspan="5" style="text-align: center;font-size: 20px;color: blue;">Reservation Number: <?php  echo $row->resid;?>
+                                        
+                                    </th>
+                                </tr>
+                                            <tr>
+    <th>Client Name</th>
+    <td><?php  echo $row->FullName;?></td>
+     <th>Mobile Number</th>
+    <td><?php  echo $row->MobileNumber;?></td>
+  </tr>
+  
 
-                     <td class="font-w600"><?php echo "Not Updated Yet"; ?></td>
-<?php } else { ?>
-                                        <td class="d-none d-sm-table-cell">
-                                            <span class="badge badge-primary"><?php  echo htmlentities($row->Status);?></span>
-                                        </td>
-<?php } ?> 
-                                         <td class="d-none d-sm-table-cell"><a href="view-reservation-detail.php?editid=<?php echo htmlentities ($row->reserve_id);?>&&bookingid=<?php echo htmlentities ($row->resid);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
-                                    </tr>
-                                    <?php $cnt=$cnt+1;}} ?> 
-                                
-                                
-                                  
-                                </tbody>
-                            </table>
+  <tr>
+    
+   <th>Email</th>
+    <td><?php  echo $row->Email;?></td>
+
+	<th>Reservation Date</th>
+    <td><?php  echo $row->date_res;?></td>
+
+  </tr>
+ 
+  <tr>
+    
+    <th>Message</th>
+    <td><?php  echo $row->suggestions;?></td>
+
+	
+    <th>Number of Guest</th>
+    <td><?php  echo $row->no_of_guest;?></td>
+  </tr>
+
+  <tr>
+    
+     <th> Final Status</th>
+
+    <td> <?php  $status=$row->Status;
+    
+if($row->Status=="Approved")
+{
+  echo "Approved";
+}
+
+if($row->Status=="Cancelled")
+{
+ echo "Cancelled";
+}
+
+
+if($row->Status=="")
+{
+  echo "Not Response Yet";
+}
+
+
+     ;?></td>
+     <th >Admin Remark</th>
+    <?php if($row->Status==""){ ?>
+
+                     <td><?php echo "Not Updated Yet"; ?></td>
+<?php } else { ?>                  <td><?php  echo htmlentities($row->Remark);?>
+                  </td>
+                  <?php } ?>
+  </tr>
+
+  <tr>
+    	
+      <tr>
+    
+    <th>Apply Date</th>
+    <td><?php  echo $row->UpdationDate;?></td>
+  </tr>
+  </tr>
+  
+ 
+<?php $cnt=$cnt+1;}} ?>
+
+</table> 
 					</div>
 				<div class="clearfix"> </div>
 			</div>

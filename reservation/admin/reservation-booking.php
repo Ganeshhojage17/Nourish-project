@@ -48,7 +48,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
-                                        <th>Booking ID</th>
+                                        <th>Reservation ID</th>
                                         <th class="d-none d-sm-table-cell">Cutomer Name</th>
                                         <th class="d-none d-sm-table-cell">Mobile Number</th>
                                         <th class="d-none d-sm-table-cell">Email</th>
@@ -59,7 +59,7 @@ if (strlen($_SESSION['odmsaid']==0)) {
                                 </thead>
                                 <tbody>
                                     <?php
-$sql="SELECT tbluser.FullName,tbluser.MobileNumber,tbluser.Email,tblbooking.ID as bid,tblbooking.BookingID,tblbooking.BookingDate,tblbooking.Status,tblbooking.ID from tblbooking join tbluser on tbluser.ID=tblbooking.UserID";
+$sql="SELECT tbluser.FullName,tbluser.MobileNumber,tbluser.Email,reservation.reserve_id as bid,reservation.resid,reservation.date_res,reservation.Status,reservation.reserve_id from reservation join tbluser on tbluser.ID=reservation.UserID";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -71,12 +71,12 @@ foreach($results as $row)
 {               ?>
                                     <tr>
                                         <td class="text-center"><?php echo htmlentities($cnt);?></td>
-                                        <td class="font-w600"><?php  echo htmlentities($row->BookingID);?></td>
+                                        <td class="font-w600"><?php  echo htmlentities($row->resid);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->FullName);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->MobileNumber);?></td>
                                         <td class="font-w600"><?php  echo htmlentities($row->Email);?></td>
                                         <td class="font-w600">
-                                            <span class="badge badge-primary"><?php  echo htmlentities($row->BookingDate);?></span>
+                                            <span class="badge badge-primary"><?php  echo htmlentities($row->date_res);?></span>
                                         </td>
                                         <?php if($row->Status==""){ ?>
 
@@ -86,7 +86,7 @@ foreach($results as $row)
                                             <span class="badge badge-primary"><?php  echo htmlentities($row->Status);?></span>
                                         </td>
 <?php } ?> 
-                                         <td class="d-none d-sm-table-cell"><a href="view-booking-detail.php?editid=<?php echo htmlentities ($row->ID);?>&&bookingid=<?php echo htmlentities ($row->BookingID);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                         <td class="d-none d-sm-table-cell"><a href="view-reservation-detail.php?editid=<?php echo htmlentities ($row->reserve_id);?>&&bookingid=<?php echo htmlentities ($row->resid);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?> 
                                 
