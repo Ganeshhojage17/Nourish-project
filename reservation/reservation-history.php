@@ -65,12 +65,12 @@ if (strlen($_SESSION['obbsuid']==0)) {
                                     <tr>
                                         <th class="text-center"></th>
                                         <th>Booking ID</th>
-                                        <th class="d-none d-sm-table-cell">Cutomer Name</th>
-                                        <th class="d-none d-sm-table-cell">Mobile Number</th>
-                                        <th class="d-none d-sm-table-cell">Email</th>
-                                        <th class="d-none d-sm-table-cell">Booking Date</th>
-                                        <th class="d-none d-sm-table-cell">Status</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 15%;">Action</th>
+                                        <th class="d-sm-table-cell">Cutomer Name</th>
+                                        <th class="d-sm-table-cell">Mobile Number</th>
+                                        <th class="d-sm-table-cell">Email</th>
+                                        <th class="d-sm-table-cell">Booking Date</th>
+                                        <th class="d-sm-table-cell">Status</th>
+                                        <th class="d-sm-table-cell" style="width: 15%;">Action</th>
                                        </tr>
                                 </thead>
                                 <tbody>
@@ -99,11 +99,11 @@ foreach($results as $row)
 
                      <td class="font-w600"><?php echo "Not Updated Yet"; ?></td>
 <?php } else { ?>
-                                        <td class="d-none d-sm-table-cell">
+                                        <td class="d-sm-table-cell">
                                             <span class="badge badge-primary"><?php  echo htmlentities($row->Status);?></span>
                                         </td>
 <?php } ?> 
-                                         <td class="d-none d-sm-table-cell"><a href="view-reservation-detail.php?editid=<?php echo htmlentities ($row->reserve_id);?>&&bookingid=<?php echo htmlentities ($row->resid);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                         <td class=" d-sm-table-cell"><a href="view-reservation-detail.php?editid=<?php echo htmlentities ($row->reserve_id);?>&&bookingid=<?php echo htmlentities ($row->resid);?>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                     </tr>
                                     <?php $cnt=$cnt+1;}} ?> 
                                 
