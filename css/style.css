@@ -17,6 +17,8 @@
 
 html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   font-family: "poopins", Arial, Helvetica, sans-serif;
   color: #000;
 }
@@ -100,9 +102,6 @@ body {
 # fixed and responsive navbar
 --------------------------------------------------------------*/
 
-/* find a table into nav */
-
-/* CSS Styles */
 .navbar ul {
   display: flex;
   gap: 1.5rem;
@@ -155,7 +154,7 @@ body {
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
-  /* border-bottom: 1px solid #fff; */
+  max-width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -182,7 +181,6 @@ body {
 section {
   scroll-margin-top: 90px;
 }
-
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
